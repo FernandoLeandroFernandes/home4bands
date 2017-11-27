@@ -1,4 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
@@ -19,6 +24,10 @@ import { BandEventService } from './band-event.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
     HttpModule,
   ],
   providers: [BandService, BandEventService],

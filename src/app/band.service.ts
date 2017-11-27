@@ -10,6 +10,7 @@ export class BandService {
   private state$ = new BehaviorSubject<any>('EMPTY');
 
   store(bands) {
+    this.state$.next({});
     this.state$.next(bands);
   }
 

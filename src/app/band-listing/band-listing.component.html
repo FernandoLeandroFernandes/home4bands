@@ -1,9 +1,23 @@
-<span *ngIf="bands">Bands found</span>
-<ul>
-  <li *ngFor="let band of bands; trackBy: trackBand">
-    <div>{{band.name}}</div>
-    <img src="{{band.image_url}}"/>
-    <div>{{band.facebook_page_url}}</div>
-    <app-band-event-listing></app-band-event-listing>
-  </li>
-</ul>
+  <mat-card-header *ngIf="bands">
+    <mat-card-header>
+      <mat-card-title><h2>Results</h2></mat-card-title>
+    </mat-card-header>
+  </mat-card-header>
+
+  <div *ngFor="let band of bands; trackBy: trackBand">
+    <mat-card class="band-card">
+      <mat-card-header>
+        <div mat-card-avatar class="background-image: url('{{band.thumb_url}}');background-size: cover;"></div>
+        <mat-card-title>
+          <h2>
+            {{band.name}}
+            <a *ngIf="band.facebook_page_url" href="{{band.facebook_page_url}}" target="blank"><i class="fa fa-facebook-official"></i></a>
+          </h2>
+        </mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="{{band.image_url}}" alt="Photo of {{band.name}}">
+      <mat-card-content>
+        <app-band-event-listing></app-band-event-listing>
+      </mat-card-content>
+    </mat-card>
+  </div>

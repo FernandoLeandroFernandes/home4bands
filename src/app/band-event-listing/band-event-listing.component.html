@@ -1,10 +1,19 @@
-Bands Shows
-<ul>
-  <li *ngFor="let event of bandEvents; trackBy: trackBandEvent">
-      <div>{{event.datetime}}</div>
-      <div>{{event.venue['name']}}</div>
-      <div>{{event.venue['city']}}</div>
-      <div>{{event.venue['country']}}</div>
-      <div>{{event.venue['date']}}</div>
-    </li>
-</ul>
+<div [hidden]="bandEvents?.length > 0">
+  <mat-card-header>
+    <mat-card-title><h2>No shows information</h2></mat-card-title>
+  </mat-card-header>
+</div>
+<div [hidden]="bandEvents?.length == 0">
+  <mat-card-header>
+    <mat-card-title><h2>Upcoming Shows</h2></mat-card-title>
+  </mat-card-header>
+  <ul>
+    <li *ngFor="let event of bandEvents; trackBy: trackBandEvent">
+        <div>{{event.datetime}}</div>
+        <div>{{event.venue['name']}}</div>
+        <div>{{event.venue['city']}}</div>
+        <div>{{event.venue['country']}}</div>
+        <div>{{event.venue['date']}}</div>
+      </li>
+  </ul>
+</div>

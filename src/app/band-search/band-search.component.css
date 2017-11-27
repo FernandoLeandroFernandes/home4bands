@@ -1,0 +1,11 @@
+.bands-listing {
+  width: 100px;
+}
+
+.band-full-width {
+  width: 80%;
+}
+
+.band-search-button {
+  text-transform: uppercase;
+}

@@ -1,8 +1,12 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    {{ title }}
-  </h1>
-</div>
-<app-band-search></app-band-search>
-<app-band-listing></app-band-listing>
+<div mat-card-avatar class="example-header-image"></div>
+<mat-card class="home4bands-card">
+  <mat-card-header>
+    <mat-card-title>
+      <div style="text-align: center; width: 400%;"><img src="/assets/logo.png"/></div>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <app-band-search></app-band-search>
+    <app-band-listing></app-band-listing>
+  </mat-card-content>
+</mat-card>

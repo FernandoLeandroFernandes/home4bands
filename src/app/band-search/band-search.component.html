@@ -1,5 +1,10 @@
-<h2>Search for band</h2>
+<!-- <mat-card-header> -->
+  <!-- <mat-card-title><h2>Search for band</h2></mat-card-title> -->
+<!-- </mat-card-header> -->
 <div>
-  <input type="text" (keyup)="change($event)"/>
-  <button (click)="click($event);">Search events</button>
+  <mat-form-field class="band-full-width">
+    <input matInput placeholder="Band" type="text" (keyup)="change($event)"/>
+    <mat-hint>Type the band name you want to know about</mat-hint>
+  </mat-form-field>
+  <button mat-button class="band-search-button" (click)="click($event);">Search band</button>
 </div>

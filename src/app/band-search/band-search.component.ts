@@ -1,6 +1,6 @@
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { BandEventService } from '../band-event.service';
 import { BandService } from './../band.service';
-import { Component, Input, OnInit, Output } from '@angular/core';
 import { Band } from '../band';
 
 @Component({
@@ -21,13 +21,14 @@ export class BandSearchComponent implements OnInit {
   }
 
   click(event) {
-    this.search(this.band);
+    this.search();
   }
 
-  search(band) {
-    console.log('[' + band + ']');
-    console.log(this.bandService.load(band));
-    console.log(this.bandEventService.load(band));
+  search() {
+    if (this.band) {
+      this.bandService.load(this.band);
+      this.bandEventService.load(this.band);
+    }
   }
 
   ngOnInit() {
