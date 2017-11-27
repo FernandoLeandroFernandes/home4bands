@@ -1,0 +1,9 @@
+<span *ngIf="bands">Bands found</span>
+<ul>
+  <li *ngFor="let band of bands">
+    <div>{{band.name}}</div>
+    <img src="{{band.image_url}}"/>
+    <div>{{band.facebook_page_url}}</div>
+    <app-band-event-listing></app-band-event-listing>
+  </li>
+</ul>

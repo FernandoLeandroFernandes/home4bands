@@ -1,0 +1,10 @@
+Bands Shows
+<ul>
+  <li *ngFor="let event of bandEvents">
+      <div>{{event.datetime}}</div>
+      <div>{{event.venue['name']}}</div>
+      <div>{{event.venue['city']}}</div>
+      <div>{{event.venue['country']}}</div>
+      <div>{{event.venue['date']}}</div>
+    </li>
+</ul>
