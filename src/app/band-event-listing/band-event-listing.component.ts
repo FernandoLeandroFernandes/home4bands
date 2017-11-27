@@ -24,6 +24,10 @@ export class BandEventListingComponent implements OnInit, OnDestroy {
     });
   }
 
+  trackBandEvent(index, bandEvent) {
+    return bandEvent ? bandEvent.id : undefined;
+  }
+
   ngOnInit() {
   }
 

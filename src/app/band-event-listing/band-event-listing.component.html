@@ -1,6 +1,6 @@
 Bands Shows
 <ul>
-  <li *ngFor="let event of bandEvents">
+  <li *ngFor="let event of bandEvents; trackBy: trackBandEvent">
       <div>{{event.datetime}}</div>
       <div>{{event.venue['name']}}</div>
       <div>{{event.venue['city']}}</div>
